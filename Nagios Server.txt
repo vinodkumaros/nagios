@@ -49,6 +49,22 @@ chkconfig nagios on
 http://<IP>/nagios
 
 
+----Adding Linux clients
+
+vi  /usr/local/nagios/etc/nagios.cfg
+
+#Add line
+cfg_file=/usr/local/nagios/etc/objects/client.cfg
+
+cd /usr/local/nagios/etc/objects
+
+cp  localhost.cfg   client.cfg
+
+vi client.cfg
+#add ip address 
+# replace localhost with clientname
+
+service nagios reatart 
 
 
 
